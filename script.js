@@ -1,9 +1,9 @@
-// script.js
-const inputTask = document.getElementById("inputtask");
-const select = document.getElementById("Select"); // Fixed capitalization
-const taskList = document.getElementById("List"); // Renamed for clarity
 
-let tasks = []; // Fixed variable name and initialization
+const inputTask = document.getElementById("inputtask");
+const select = document.getElementById("Select"); 
+const taskList = document.getElementById("List"); 
+
+let tasks = []; 
 
 function addTask() {
     const description = inputTask.value.trim();
@@ -21,8 +21,8 @@ function addTask() {
     };
 
     tasks.push(task);
-    inputTask.value = ""; // Clear input after adding
-    displayTasks(); // Fixed function name
+    inputTask.value = ""; 
+    displayTasks(); 
 }
 
 function toggleTask(index) {
@@ -30,14 +30,14 @@ function toggleTask(index) {
     displayTasks();
 }
 
-function displayTasks() { // Fixed function name
+function displayTasks() { 
     taskList.innerHTML = "";
 
-    tasks.forEach((task, index) => { // Fixed 'task' to 'tasks'
+    tasks.forEach((task, index) => { 
         const li = document.createElement("li");
         li.className = `task ${task.category} ${task.completed ? "completed" : ""}`;
 
-        const dateString = task.dateAdded.toLocaleDateString("en-US", { // Fixed method name
+        const dateString = task.dateAdded.toLocaleDateString("en-US", { 
             month: "long",
             day: "numeric",
             year: "numeric",
@@ -48,6 +48,6 @@ function displayTasks() { // Fixed function name
             <span>${task.description.toUpperCase()} (${task.category}) - ${dateString}</span>
         `;
 
-        taskList.appendChild(li); // Fixed method name
+        taskList.appendChild(li); 
     });
 }

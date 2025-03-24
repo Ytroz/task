@@ -4,13 +4,27 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(42, 165, 83);
+    background-color: rgb(245, 252, 247);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.todo{
+    /* border: 2px solid hotpink; */
+    width: 70%;
+    padding-top: 50px;
+    margin-top: 50px;
+    margin-left: 90px;
+    padding: 0;
+    padding-bottom: 300px;
+    padding-left: 10px;
+    background-color: green;
+    border-radius: 10px;
+
 }
 h1{
     text-align: center;
     color:#fff;
     margin-top: 20px;
+    padding-top: 50px;
 }
 .Input button:hover{
 background-color: rgb(3, 253, 212);
@@ -33,7 +47,7 @@ cursor: pointer;
 }
  #inputtask{
 padding: 10px;
-width: 20%;
+width: 30%;
 border-radius: 10px;
 border: none;
 }
